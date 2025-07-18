@@ -13,6 +13,11 @@ def alarm(seconds):
         minutes_left = time_left // 60
         seconds_left = time_left % 60
         print(f"Time left: {minutes_left} minutes and {seconds_left} seconds", end='\r')
+    playsound('alarm_sound.mp3')
 
-alarm(10)   
+minutes = int(input("Enter the number of minutes for the alarm: "))
+seconds = int(input("Enter the number of seconds for the alarm: "))
+total_seconds = minutes * 60 + seconds
+
+alarm(total_seconds)   
      
